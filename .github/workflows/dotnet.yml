@@ -29,5 +29,5 @@ jobs:
       uses: azure/webapps-deploy@v1
       with: 
         app-name: dotnetcorewebappGLobal # Replace with your app name
-        publish-profile: $ publish_profile # Define secret variable in repository settings as per action documentation
+        publish-profile: ${{ secrets.PUBLISH_PROFILE  }} # Define secret variable in repository settings as per action documentation
         package: './dotnetcorewebapp'
